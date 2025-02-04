@@ -33,7 +33,7 @@ export default function Navbar() {
         <nav className="hidden md:flex flex-1 justify-end space-x-6">
           <a href="/dashboard" className="hover:underline hover:text-accent transition">Questions</a>
           <a href="/dashboard/questions" className="hover:underline hover:text-accent transition">Challenges</a>
-          <a href="/dashboard/progress" className="hover:underline hover:text-accent transition">Progress</a>
+          <a href="/dashboard/progress" className="hover:underline hover:text-accent transition">My Progress</a>
         </nav>
 
         {/* ✅ Contact Button */}
@@ -64,7 +64,7 @@ export default function Navbar() {
         <div className="md:hidden bg-darkBlue text-white flex flex-col items-center absolute top-full left-0 w-full shadow-lg py-4 z-50">
           <a href="/dashboard" className="py-2 px-6 w-full text-center hover:bg-primary transition">Questions</a>
           <a href="/dashboard/questions" className="py-2 px-6 w-full text-center hover:bg-primary transition">Challenges</a>
-          <a href="/dashboard/progress" className="py-2 px-6 w-full text-center hover:bg-primary transition">Progress</a>
+          <a href="/dashboard/progress" className="py-2 px-6 w-full text-center hover:bg-primary transition">My Progress</a>
           <a href="/dashboard/contact"
               className="bg-accent text-white py-2 px-6 rounded hover:bg-primary transition mx-auto block"
             >
