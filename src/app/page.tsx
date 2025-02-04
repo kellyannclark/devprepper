@@ -35,7 +35,7 @@ export default function Home() {
         </h1>
 
 
-        <p className="text-lg sm:text-xl mb-6">
+        <p className="text-xl font-semibold text-secondary sm:text-xl mb-6">
 
             Get ahead with curated questions, coding challenges, and expert strategies.
           </p>
