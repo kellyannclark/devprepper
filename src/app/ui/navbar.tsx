@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Rajdhani, Poppins } from "next/font/google";
+import { Oswald, Poppins } from "next/font/google";
 
 // Load fonts using Next.js Font Optimization
-const rajdhani = Rajdhani({ weight: ["600"], subsets: ["latin"] });
+const rajdhani = Oswald({ weight: ["700"], subsets: ["latin"] });
 const poppins = Poppins({ weight: ["400", "600"], subsets: ["latin"] });
 
 export default function Navbar() {

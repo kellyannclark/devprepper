@@ -1,12 +1,13 @@
-"use client"; //  Required for client-side components
+"use client";
 
 import Image from "next/image";
 
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-light text-secondary font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen bg-light text-secondary font-sans">
       {/* Hero Section - Mobile First */}
-          <header className="relative py-2 px-4 text-center overflow-hidden">
+      <header className="relative py-2 px-4 text-center overflow-hidden">
         {/* Opaque Overlay (Covers Mobile & Desktop) */}
         <div className="absolute inset-0 bg-white opacity-50 z-10"></div>
 
@@ -29,9 +30,11 @@ export default function Home() {
 
         {/* Hero Text (Ensures it appears above overlay) */}
         <div className="relative z-20 max-w-3xl mx-auto text-center text-[#003049]">
-          <h1 className="text-3xl sm:text-5xl py-4 font-bold mb-4">
-            Master Your Next Technical Interview
-          </h1>
+        <h1 className="text-4xl sm:text-5xl py-4 mb-4 font-heading font-extrabold">
+          <span className="text-[#003049] text-4xl sm:text-5xl">Master</span> Your Next Technical Interview
+        </h1>
+
+
           <p className="text-base sm:text-lg mb-6">
             Get ahead with curated questions, coding challenges, and expert strategies.
           </p>
@@ -52,10 +55,9 @@ export default function Home() {
         </div>
       </header>
 
-
       {/* Features Section */}
       <section id="features" className="py-12 px-4 sm:px-8 md:px-20 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl text-center mb-10 font-heading font-bold">
           Features
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -109,7 +111,7 @@ export default function Home() {
 
       {/* Call to Action Section */}
       <section className="bg-light py-12 px-4 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-secondary">
+        <h2 className="text-2xl sm:text-3xl mb-6 text-secondary font-heading font-bold">
           Start Your Journey Today
         </h2>
         <p className="text-sm sm:text-base text-secondary mb-6">

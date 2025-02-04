@@ -19,7 +19,7 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"], // Updated body font
         serif: ["Merriweather", "serif"],
-        heading: ["Bebas Neue", "sans-serif"], // New heading font
+        heading: ["Oswald", "sans-serif"], // Updated heading font
       },
     },
   },
