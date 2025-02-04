@@ -33,7 +33,7 @@ export default function Navbar() {
 
         {/* ✅ Contact Button - Aligned to Right */}
         <div className="hidden md:flex ml-4">
-          <a href="/dashboard/contact" className="bg-accent text-white py-2 px-4 rounded hover:bg-primary transition">
+          <a href="/dashboard/contact" className="bg-accent text-foreground py-2 px-4 rounded hover:bg-primary transition">
             Contact Us
           </a>
         </div>
