@@ -9,13 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        primary: "#5C9EAD", // Teal-like color
-        secondary: "#326273", // Deep teal
-        accent: "#E39774", // Peach-like color
-        light: "#EEEEEE", // Light gray
-        white: "#FFFFFF", // Pure white
+        background: "#EAE2B7", // Light Beige
+        foreground: "#003049", // Dark Blue
+        primary: "#D62828", // Red
+        secondary: "#F77F00", // Orange
+        accent: "#FCBF49", // Yellow
+        darkBlue: "#003049", // ✅ Explicitly add dark blue
       },
     },
   },
