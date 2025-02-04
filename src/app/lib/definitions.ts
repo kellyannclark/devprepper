@@ -26,3 +26,21 @@ export interface Question {
   correctAnswer: string; // Correct answer
   explanation?: string; // Optional explanation for the correct answer
 }
+
+export interface CodingChallenge {
+    id: string;
+    title: string;
+    description: string;
+    exampleInput: string;
+    exampleOutput: string;
+    expectedAnswer: string; // This is the correct answer the user must provide.
+    difficulty: "easy" | "medium" | "hard";
+    tags: string[]; // Categories like "algorithms", "strings"
+  }
+  
+  export interface UserProgress {
+    userId: string;
+    completedQuestions: string[]; // Array of question IDs
+    attempts: { questionId: string; userAnswer: string; isCorrect: boolean }[];
+  }
+  

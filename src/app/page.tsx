@@ -38,7 +38,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/dashboard"
-              className="px-6 py-3 bg-white text-secondary font-semibold rounded-full shadow-md hover:bg-light transition"
+              className="px-6 py-3 bg-secondary text-white font-semibold rounded-full shadow-md hover:bg-light transition"
             >
               Get Started
             </a>

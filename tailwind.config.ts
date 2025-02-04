@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import { type Config } from "tailwindcss";
 
 export default {
   content: [
@@ -9,12 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#EAE2B7", // Light Beige
-        foreground: "#003049", // Dark Blue
-        primary: "#D62828", // Red
-        secondary: "#F77F00", // Orange
-        accent: "#FCBF49", // Yellow
-        darkBlue: "#003049", // ✅ Explicitly add dark blue
+        background: "#EAE2B7",
+        foreground: "#003049",
+        primary: "#D62828",
+        secondary: "#F77F00",
+        accent: "#FCBF49",
+        darkBlue: "#003049",
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"], // Updated body font
+        serif: ["Merriweather", "serif"],
+        heading: ["Bebas Neue", "sans-serif"], // New heading font
       },
     },
   },

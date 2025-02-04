@@ -1,7 +1,7 @@
 import { Question } from "./definitions";
 import { User } from "./definitions";
 import bcrypt from "bcryptjs"; // Simulate password hashing
-
+import { CodingChallenge } from "./definitions";
 
 //finds a user by email and passowrd
 export function authenticateUser(email: string, password: string): User | null {
@@ -12,28 +12,80 @@ export function authenticateUser(email: string, password: string): User | null {
     const passwordsMatch = bcrypt.compareSync(password, user.password);
     return passwordsMatch ? user : null;
   }
-  
 
 // Hash passwords (for real apps, store hashed passwords)
 const hashedPassword = bcrypt.hashSync("password123", 10);
 
 export const users: User[] = [
+    {
+      id: "1",
+      name: "John Doe",
+      email: "customer@example.com",
+      password: hashedPassword, // Use hashed password
+      role: "customer",
+    },
+    {
+      id: "2",
+      name: "Admin User",
+      email: "admin@example.com",
+      password: hashedPassword,
+      role: "admin",
+    },
+  ];
+
+//Coding Challenges
+export const challenges: CodingChallenge[] = [
   {
     id: "1",
-    name: "John Doe",
-    email: "customer@example.com",
-    password: hashedPassword, // Use hashed password
-    role: "customer",
+    title: "Sum of Two Numbers",
+    description: "Write a function that takes two numbers and returns their sum.",
+    exampleInput: "sum(3, 5)",
+    exampleOutput: "8",
+    expectedAnswer: "8",
+    difficulty: "easy",
+    tags: ["math", "functions"],
   },
   {
     id: "2",
-    name: "Admin User",
-    email: "admin@example.com",
-    password: hashedPassword,
-    role: "admin",
+    title: "Reverse a String",
+    description: "Write a function that reverses a given string.",
+    exampleInput: `"hello"`,
+    exampleOutput: `"olleh"`,
+    expectedAnswer: "olleh",
+    difficulty: "easy",
+    tags: ["strings", "algorithms"],
+  },
+  {
+    id: "3",
+    title: "Check for Palindrome",
+    description: "Write a function that checks if a string is a palindrome.",
+    exampleInput: `"racecar"`,
+    exampleOutput: `"true"`,
+    expectedAnswer: "true",
+    difficulty: "medium",
+    tags: ["strings", "logic"],
+  },
+  {
+    id: "4",
+    title: "Find Maximum in an Array",
+    description: "Write a function that returns the largest number in an array.",
+    exampleInput: `[1, 5, 3, 9, 2]`,
+    exampleOutput: `"9"`,
+    expectedAnswer: "9",
+    difficulty: "medium",
+    tags: ["arrays", "math"],
+  },
+  {
+    id: "5",
+    title: "FizzBuzz",
+    description: "Write a function that prints numbers from 1 to n, replacing multiples of 3 with 'Fizz', multiples of 5 with 'Buzz', and multiples of both with 'FizzBuzz'.",
+    exampleInput: `"5"`,
+    exampleOutput: `["1", "2", "Fizz", "4", "Buzz"]`,
+    expectedAnswer: `["1", "2", "Fizz", "4", "Buzz"]`,
+    difficulty: "hard",
+    tags: ["loops", "conditionals"],
   },
 ];
-
 
 
 
