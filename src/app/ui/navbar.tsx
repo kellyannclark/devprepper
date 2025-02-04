@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-darkBlue text-white shadow-md p-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-6">
         {/* Logo and Title */}
         <div className="flex items-center space-x-3">
           <Image
@@ -24,21 +24,21 @@ export default function Navbar() {
           </h1>
         </div>
 
-        {/* Desktop Navigation - Center the items */}
-        <nav className="hidden md:flex flex-grow justify-center space-x-10">
+        {/* ✅ Desktop Navigation - Pushes Items Closer to Contact Button */}
+        <nav className="hidden md:flex flex-1 justify-end space-x-6">
           <a href="/dashboard" className="hover:underline hover:text-accent transition">Questions</a>
           <a href="/dashboard/questions" className="hover:underline hover:text-accent transition">Challenges</a>
           <a href="/dashboard/progress" className="hover:underline hover:text-accent transition">Progress</a>
         </nav>
 
-        {/* Contact Button is aligned properly */}
-        <div className="hidden md:flex">
+        {/* ✅ Contact Button - Aligned to Right */}
+        <div className="hidden md:flex ml-4">
           <a href="/dashboard/contact" className="bg-accent text-white py-2 px-4 rounded hover:bg-primary transition">
             Contact Us
           </a>
         </div>
 
-        {/* Hamburger Button for Mobile */}
+        {/* ✅ Mobile Hamburger Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -54,7 +54,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ✅ Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-darkBlue text-white flex flex-col items-center absolute top-full left-0 w-full shadow-lg py-4">
           <a href="/dashboard" className="py-2 px-6 w-full text-center hover:bg-primary transition">Questions</a>
