@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -8,13 +8,15 @@ export default function ContactPage() {
         message: "",
     });
 
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState<string>("");
 
-    const handleChange = (e) => {
+    // 🛠 Fix: Add type for event `e`
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    // 🛠 Fix: Add type for `handleSubmit`
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const res = await fetch("/api/contact", {
